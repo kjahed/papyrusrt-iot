@@ -1,0 +1,11 @@
+module PapyrusrtDDS {
+
+#pragma DCPS_DATA_TYPE "PapyrusrtDDS::RawBuffer"
+
+typedef sequence<octet> BufferType;
+
+struct RawBuffer {
+  BufferType buffer;
+};
+
+};

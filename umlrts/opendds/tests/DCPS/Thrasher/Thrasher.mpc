@@ -1,0 +1,34 @@
+//
+//
+
+project(*publisher): dcpsexe, dcps_transports_for_test {
+  exename   = publisher
+  
+  after    += DcpsFooType
+  libs     += DcpsFooType
+  
+  includes += ../FooType
+  libpaths += ../FooType
+
+  Source_Files {
+    Publisher.cpp
+    ParticipantTask.cpp
+    ProgressIndicator.cpp
+  }
+}
+
+project(*subscriber): dcpsexe, dcps_transports_for_test {
+  exename   = subscriber
+  
+  after    += DcpsFooType
+  libs     += DcpsFooType
+  
+  includes += ../FooType
+  libpaths += ../FooType
+
+  Source_Files {
+    Subscriber.cpp
+    DataReaderListenerImpl.cpp
+    ProgressIndicator.cpp
+  }
+}

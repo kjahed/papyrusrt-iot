@@ -1,0 +1,11 @@
+project: dcpsexe, dcps_transports_for_test {
+  exename   = bit
+  libpaths += ../FooType4
+  libs     +=  DcpsFooType4
+  after    += DcpsFooType4
+
+  Source_Files {
+    main.cpp
+    common.cpp
+  }
+}

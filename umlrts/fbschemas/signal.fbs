@@ -1,0 +1,19 @@
+namespace FBSchema;
+
+table Signal {
+	protocol: string (required);
+	name: string (required);
+	sourceSlot: string (required);
+	destinationSlot: string (required);
+	sourcePort: int;
+	destinationPort: int;
+	isDestinationInternal: bool = false;
+    params: [Obj];
+}
+
+table Obj {
+    data: [ubyte];
+    fields: [Obj];
+}
+
+root_type Signal;

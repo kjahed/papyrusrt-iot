@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/media/psf/Home/Desktop/mqtt-paper/Implementation/umlrts/lib/linux/x86-g++-5.4.0/debug
+includedir=/media/psf/Home/Desktop/mqtt-paper/Implementation/umlrts/include
+
+Name: libcoap
+Description: C-Implementation of CoAP.
+Version: 4.1.2
+URL: https://libcoap.net/
+Libs: -L${libdir} -lcoap-1
+Cflags: -I${includedir}/coap

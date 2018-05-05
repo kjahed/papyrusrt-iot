@@ -1,0 +1,6 @@
+project: dcpsexe {
+  after       += TestFramework
+
+  libs        += TestFramework
+  includes    += $(DDS_ROOT)/tests/DCPS/TestFramework
+}

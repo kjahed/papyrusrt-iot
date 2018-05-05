@@ -1,0 +1,14 @@
+namespace FBSchema;
+
+enum Type : byte { DEPLOYMENT_MAP, READY_SIGNAL, PROTOCOL_SIGNAL }
+
+table Message {
+	sender: string (required);
+	receiver: string (required);
+	type: Type = PROTOCOL_SIGNAL;
+
+    payloadSize: int = 0;
+    payload: [ubyte];
+}
+
+root_type Message;

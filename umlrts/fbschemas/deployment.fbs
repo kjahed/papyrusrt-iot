@@ -1,0 +1,30 @@
+namespace FBSchema;
+
+table Deployment {
+	hosts: [Host] (required);
+	controllers: [Controller] (required);
+	capsules: [Capsule] (required);
+}
+
+table Capsule {
+	name: string (required);
+	controller: string (required);	
+    proxyports: [ProxyPort];
+}
+
+table Controller {
+	name: string (required);
+	host: string (required);
+}
+
+table Host {
+	name: string (required);
+	address: string (required);
+}
+
+table ProxyPort {
+    name: string (required);
+    endpoint: string (required);
+}
+
+root_type Deployment;

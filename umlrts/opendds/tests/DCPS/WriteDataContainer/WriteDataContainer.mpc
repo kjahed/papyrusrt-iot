@@ -1,0 +1,7 @@
+project: dcpsexe {
+  exename   = WriteDataContainerTest
+  idlflags += -SS
+  TypeSupport_Files {
+    Simple.idl
+  }
+}

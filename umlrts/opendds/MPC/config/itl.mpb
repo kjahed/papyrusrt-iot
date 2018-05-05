@@ -1,0 +1,8 @@
+feature(!no_itl) {
+  includes += $(DDS_ROOT)/tools/IntermediateTypeLang/cpp
+  includes += $(DDS_ROOT)/tools/IntermediateTypeLang/cpp/rapidjson/include
+}
+
+feature(no_itl) {
+  macros += NO_ITL
+}
